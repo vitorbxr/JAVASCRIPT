@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ola Mundo!</h1>
+  <script>
+        var conf;
+    var n1 = window.prompt('Digite o numero 1'); // var recebe uma string
+    var n2 = window.prompt('Digite o numero 2'); // var recebe uma string   
+    var soma = Number.parseFloat(n1)+Number.parseInt(n2) // definindo se eh real ou inteiro
+    var soma2 = Number(n1)+Number(n2) // deixando o java script definir o tipo de numero
+    var somas1 = String(soma) // transformando numero em string
+    var somas2 = (soma).toString() // transformando numero em string
+    window.alert('A soma dos numeros é: ' + soma )
+    document.write('A soma dos numeros tambem será: ' + soma2 + '<br/>' )
+    document.write('Isso é uma string da soma: ' + somas1 + ` ou usando o place holder ${soma} <br/>`) // usando place holder
+    document.write('numero com duas casas decimais ' + soma.toFixed(2) + '<br />') // casas decimais
+    document.write('trocando o . por , ' + soma.toFixed(2).replace('.',',') + '<br />') //trocar ponto por virgula
+    document.write('Em moedas ' + soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) + '<br />') //escrevendo moeda
+
+    var nome = window.prompt('Digite seu nome')
+    document.write('Seu nome é <strong>' + nome + '</strong> e possui ' + nome.length + ' letras <br/>') // comprimento da string
+    document.write('Seu nome é <strong>' + nome + `</strong> e em maiusculo é ${nome.toUpperCase()} <br/> `) // letras maiusculas
+    document.write('Seu nome é <strong>' + nome + `</strong> e em minusculo é ${nome.toLowerCase()} <br/> `) // letras minusculas
+
+  </script>
+</body>
+</html>
