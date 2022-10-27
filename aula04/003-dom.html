@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(121, 156, 233);
+      color: white;
+      font: normal 18pt arial;
+    }
+  </style>
+  <script>
+    window.document.write('OlaMundo <br>') //posso ocultar o window q funciona tb para tudo
+    window.document.write(window.document.charset+'<br>')
+    window.document.write(window.navigator.appName+'<br>')
+    window.document.write(window.document.URL+'<br>')
+  </script>
+</head>
+<body>
+  <h1>Iniciando os estudos DOM</h1>
+  <p>aqui vai o resultado</p>
+  <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+  <div id="msg">Clique em mim</div>
+  <div id="mud"></div>
+  <div name="mud"> dasdas </div>
+  <div class="mud"> dasdas </div>
+  <div id="sel">asdas</div>
+  <script>
+    //usando get por tag
+    var p2 = document.getElementsByTagName('p')[1]
+    document.write('Usando innertext e get by tagname: '+ p2.innerText + '<br>')
+    document.write('Usando innerhtml e get by tagname: '+ p2.innerHTML)
+    p2.style.color = 'black'
+    window.alert(p2.innerHTML)
+    // usando get por id name e class
+    var d = document.getElementById('msg')
+    d.style.background = 'green'
+    window.document.getElementById('mud').innerText = 'Inserindo texto por id e innerText'
+    window.document.getElementsByName('mud')[0].innerText = 'Inserindo texto por name e innerText'
+    window.document.getElementsByClassName('mud')[0].innerHTML = 'Inserindo texto por class e <strong>innerHTML</strong>'
+    //usando por seletores.. recomendado'
+    var s = window.document.querySelector('div#sel')
+    s.style.background = 'blue'
+    s.innerText = 'Usando seletores'
+  </script>
+</body>
+</html>
